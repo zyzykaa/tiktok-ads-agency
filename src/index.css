@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Manrope", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Inter", sans-serif;
+
+  --color-outline: #ad8889;
+  --color-secondary-container: #05ece7;
+  --color-surface-tint: #ffb3b6;
+  --color-primary-container: #ff5168;
+  --color-primary: #ffb3b6;
+  --color-on-surface: #e5e2e1;
+  --color-tertiary-fixed-dim: #ccbdff;
+  --color-on-secondary: #003735;
+  --color-surface-container-high: #2a2a2a;
+  --color-surface-dim: #141313;
+  --color-on-background: #e5e2e1;
+  --color-background: #141313;
+  --color-surface-container-highest: #353434;
+  --color-on-primary: #680019;
+  --color-surface: #141313;
+  --color-secondary: #affffb;
+  --color-on-primary-container: #5b0015;
+  --color-surface-container: #201f1f;
+  --color-surface-container-low: #1c1b1b;
+  --color-surface-variant: #353434;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-outline-variant: #5d3f40;
+  --color-secondary-fixed: #35fbf5;
+  --color-tertiary: #ccbdff;
+  --color-tertiary-container: #997bff;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #141313;
+  color: #e5e2e1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-headline { font-family: 'Manrope', sans-serif; }
+
+.glass-card {
+  background: rgba(53, 52, 52, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(173, 136, 137, 0.15);
+}
+
+.neon-glow-pink {
+  box-shadow: 0 0 40px -10px rgba(255, 81, 104, 0.3);
+}
+
+.neon-glow-cyan {
+  box-shadow: 0 0 40px -10px rgba(53, 251, 245, 0.2);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #ffb3b6 0%, #ff5168 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-pulse-primary {
+  background: radial-gradient(circle at center, rgba(255, 179, 182, 0.08) 0%, transparent 70%);
+}
+
+/* Custom scrollbar for a sleeker look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #141313;
+}
+::-webkit-scrollbar-thumb {
+  background: #353434;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5d3f40;
+}
