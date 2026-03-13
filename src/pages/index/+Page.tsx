@@ -1,11 +1,35 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { FadeIn } from '../components/FadeIn';
+import { FadeIn } from '../../components/FadeIn';
+import { SEO } from '../../components/SEO';
 import { Zap, TrendingUp, CheckCircle, ArrowRight, Globe, HeadphonesIcon, Rocket } from 'lucide-react';
+import { navigate } from 'vike/client/router';
 
-export const Home = ({ setPath }: { setPath: (path: string) => void }) => {
+export default function Home() {
+  const handleNavigate = (path: string) => {
+    navigate(path);
+  };
+
+  const homeSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "TikTok Ads Agency",
+    "image": "https://your-tiktok-agency.com/og-image.jpg",
+    "description": "We provide premium agency ad accounts, scroll-stopping creatives, and data-driven media buying to scale your ROI on TikTok.",
+    "url": "https://your-tiktok-agency.com/",
+    "telephone": "+84969532635",
+    "priceRange": "$$$",
+    "areaServed": ["US", "UK"]
+  };
+
   return (
-    <main className="pt-20">
+    <>
+      <SEO 
+        title="Scaling Top E-commerce & Info Brands" 
+        description="We provide premium agency ad accounts, scroll-stopping creatives, and data-driven media buying to scale your ROI on TikTok." 
+        schemaData={homeSchema}
+      />
+      <main className="pt-20">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 bg-pulse-primary opacity-20"></div>
@@ -29,14 +53,14 @@ export const Home = ({ setPath }: { setPath: (path: string) => void }) => {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
-                onClick={() => setPath('/contact')}
+                onClick={() => handleNavigate('/contact')}
                 className="bg-gradient-to-br from-primary to-primary-container text-on-primary-container px-8 py-4 rounded-xl font-bold hover:opacity-90 transition-all neon-glow-pink flex items-center justify-center gap-2"
               >
                 Book a Strategy Call
                 <ArrowRight className="w-5 h-5" />
               </button>
               <button 
-                onClick={() => setPath('/case-studies')}
+                onClick={() => handleNavigate('/case-studies')}
                 className="px-8 py-4 rounded-xl font-bold border border-outline-variant/20 hover:bg-surface-container transition-all flex items-center justify-center gap-2"
               >
                 View Case Studies
@@ -174,7 +198,7 @@ export const Home = ({ setPath }: { setPath: (path: string) => void }) => {
                     </li>
                   ))}
                 </ul>
-                <button onClick={() => setPath('/services')} className="inline-flex items-center gap-2 text-primary font-bold text-sm hover:gap-3 transition-all mt-auto">
+                <button onClick={() => handleNavigate('/services')} className="inline-flex items-center gap-2 text-primary font-bold text-sm hover:gap-3 transition-all mt-auto">
                   Learn more <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
@@ -197,7 +221,7 @@ export const Home = ({ setPath }: { setPath: (path: string) => void }) => {
                     </li>
                   ))}
                 </ul>
-                <button onClick={() => setPath('/services')} className="inline-flex items-center gap-2 text-secondary-container font-bold text-sm hover:gap-3 transition-all relative z-10 mt-auto">
+                <button onClick={() => handleNavigate('/services')} className="inline-flex items-center gap-2 text-secondary-container font-bold text-sm hover:gap-3 transition-all relative z-10 mt-auto">
                   Learn more <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
@@ -219,7 +243,7 @@ export const Home = ({ setPath }: { setPath: (path: string) => void }) => {
                     </li>
                   ))}
                 </ul>
-                <button onClick={() => setPath('/services')} className="inline-flex items-center gap-2 text-primary font-bold text-sm hover:gap-3 transition-all mt-auto">
+                <button onClick={() => handleNavigate('/services')} className="inline-flex items-center gap-2 text-primary font-bold text-sm hover:gap-3 transition-all mt-auto">
                   Learn more <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
@@ -341,13 +365,13 @@ export const Home = ({ setPath }: { setPath: (path: string) => void }) => {
           <p className="text-on-surface/70 mb-10 max-w-xl mx-auto">Join the 50+ brands scaling with high-performance TikTok systems. Book a strategy audit today.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
-              onClick={() => setPath('/contact')}
+              onClick={() => handleNavigate('/contact')}
               className="bg-gradient-to-br from-primary to-primary-container text-on-primary-container px-10 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-all neon-glow-pink"
             >
               Book a Strategy Call
             </button>
             <button 
-              onClick={() => setPath('/case-studies')}
+              onClick={() => handleNavigate('/case-studies')}
               className="bg-surface-container-highest/50 backdrop-blur-md px-10 py-4 rounded-xl font-bold text-lg border border-outline-variant/30 hover:bg-surface-container-highest transition-all"
             >
               View Case Studies
@@ -356,5 +380,6 @@ export const Home = ({ setPath }: { setPath: (path: string) => void }) => {
         </FadeIn>
       </section>
     </main>
+    </>
   );
 };

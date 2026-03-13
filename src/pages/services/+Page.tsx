@@ -1,10 +1,16 @@
 import React from 'react';
-import { FadeIn } from '../components/FadeIn';
+import { FadeIn } from '../../components/FadeIn';
+import { SEO } from '../../components/SEO';
 import { ShieldCheck, Rocket, Verified, Timer, Globe, PenTool, Video, Users, Activity, TrendingUp } from 'lucide-react';
 
-export const Services = ({ setPath }: { setPath: (path: string) => void }) => {
+export default function Services() {
   return (
-    <main className="pt-32 pb-20 overflow-hidden">
+    <>
+      <SEO 
+        title="Services & Infrastructure" 
+        description="Everything you need to scale your brand on TikTok, from premium infrastructure to viral creatives and data-driven management." 
+      />
+      <main className="pt-32 pb-20 overflow-hidden">
       {/* Service Section 1: Agency Accounts (Asymmetric Bento) */}
       <section className="max-w-7xl mx-auto px-6 mb-40">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -95,13 +101,13 @@ export const Services = ({ setPath }: { setPath: (path: string) => void }) => {
           <div className="lg:w-1/2 order-2 lg:order-1">
             <div className="grid grid-cols-2 gap-4">
               <FadeIn delay={0.1} className="aspect-[3/4] rounded-2xl bg-surface-container overflow-hidden relative group">
-                <img className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" alt="Dynamic video editing interface with TikTok UI" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjxUKLmuOSEaviLnSPxz4GrcG55eeXE6E7T9Eek_HLCKvJoS4_A5AOJor8CbzmW1NulIJwtlbc1FfuKQwiWrqUm8mAOStXXuby8yge2-eYyuIlle_4nLU4F5SPlHMdkbkg3dleK9rDLX_pwSJ5xDJOC0j0ZlGSmR8c6tCj3Or-h4DZpK_NgxlqAOx4xZU3crouf7imnHHLQtIt3jXVKsVDaQ_GNogyofUahKcfPlsyghrSq_qzhM7tmVGV9uSKYePwXQBx3o4eEcU" referrerPolicy="no-referrer" />
+                <img loading="lazy" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" alt="Dynamic video editing interface with TikTok UI" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjxUKLmuOSEaviLnSPxz4GrcG55eeXE6E7T9Eek_HLCKvJoS4_A5AOJor8CbzmW1NulIJwtlbc1FfuKQwiWrqUm8mAOStXXuby8yge2-eYyuIlle_4nLU4F5SPlHMdkbkg3dleK9rDLX_pwSJ5xDJOC0j0ZlGSmR8c6tCj3Or-h4DZpK_NgxlqAOx4xZU3crouf7imnHHLQtIt3jXVKsVDaQ_GNogyofUahKcfPlsyghrSq_qzhM7tmVGV9uSKYePwXQBx3o4eEcU" referrerPolicy="no-referrer" />
                 <div className="absolute inset-0 bg-gradient-to-t from-surface-dim/80 to-transparent flex items-end p-6">
                   <span className="label-md font-bold text-primary tracking-widest">POST-PRO</span>
                 </div>
               </FadeIn>
               <FadeIn delay={0.2} className="aspect-[3/4] rounded-2xl bg-surface-container overflow-hidden relative mt-8 group">
-                <img className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" alt="UGC creator recording content with ring light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNjL3iBz4cu1hdMed8H06ZDUpbUsdhS9lYHtbkqawjuvyQrfCQpxKLn-2bfyzNb3ds6hYYPjbOKFvLF7KEnr6NMg6gySQv8198ED98gyF8iRg3vl_AtClASlgL9lZe4gdhV3sIZyHaJr-noMVs8YroHANRA5qHu3B4h0N5qxO-odlQBj2BKkWN4_VFN2HgSBQpch21pg8SdsnzbTNkSph7X-P5WGmK17VTIAQdzNzLDgHDWhx4gC-UGZGtfx3xBfle2umce9pbAdw" referrerPolicy="no-referrer" />
+                <img loading="lazy" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" alt="UGC creator recording content with ring light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNjL3iBz4cu1hdMed8H06ZDUpbUsdhS9lYHtbkqawjuvyQrfCQpxKLn-2bfyzNb3ds6hYYPjbOKFvLF7KEnr6NMg6gySQv8198ED98gyF8iRg3vl_AtClASlgL9lZe4gdhV3sIZyHaJr-noMVs8YroHANRA5qHu3B4h0N5qxO-odlQBj2BKkWN4_VFN2HgSBQpch21pg8SdsnzbTNkSph7X-P5WGmK17VTIAQdzNzLDgHDWhx4gC-UGZGtfx3xBfle2umce9pbAdw" referrerPolicy="no-referrer" />
                 <div className="absolute inset-0 bg-gradient-to-t from-surface-dim/80 to-transparent flex items-end p-6">
                   <span className="label-md font-bold text-secondary tracking-widest">UGC CREATIVE</span>
                 </div>
@@ -179,5 +185,6 @@ export const Services = ({ setPath }: { setPath: (path: string) => void }) => {
         </FadeIn>
       </section>
     </main>
+    </>
   );
 };

@@ -1,13 +1,24 @@
 import React from 'react';
-import { FadeIn } from '../components/FadeIn';
+import { FadeIn } from '../../components/FadeIn';
+import { SEO } from '../../components/SEO';
 import { CheckCircle2, Star, HelpCircle, Timer, CreditCard, Headset } from 'lucide-react';
+import { navigate } from 'vike/client/router';
 
-export const Pricing = ({ setPath }: { setPath: (path: string) => void }) => {
+export default function Pricing() {
+  const [currency, setCurrency] = React.useState<'USD' | 'GBP'>('USD');
+  const handleNavigate = (path: string) => {
+    navigate(path);
+  };
   return (
-    <main className="relative overflow-hidden pt-20">
+    <>
+      <SEO 
+        title="Pricing & Plans" 
+        description="Unlock the power of TikTok with agency-level infrastructure. Transparent pricing built for hypergrowth and massive scale." 
+      />
+      <main className="relative overflow-hidden pt-20">
       {/* Ambient Background Pulses */}
-      <div className="absolute w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(175,255,251,0.08)_0%,rgba(20,19,19,0)_70%)] blur-[60px] -z-10 top-[-10%] left-[-5%]"></div>
-      <div className="absolute w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(255,81,104,0.05)_0%,rgba(20,19,19,0)_70%)] blur-[60px] -z-10 bottom-[-10%] right-[-5%]"></div>
+      <div className="absolute w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(175,255,251,0.08)_0%,transparent_70%)] blur-[60px] -z-10 top-[-10%] left-[-5%]"></div>
+      <div className="absolute w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(255,81,104,0.05)_0%,transparent_70%)] blur-[60px] -z-10 bottom-[-10%] right-[-5%]"></div>
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-6 text-center">
@@ -17,9 +28,24 @@ export const Pricing = ({ setPath }: { setPath: (path: string) => void }) => {
             <h1 className="font-headline text-5xl md:text-7xl font-extrabold mb-6 tracking-tight leading-[1.1]">
               Pricing built for <span className="gradient-text">Hypergrowth</span>
             </h1>
-            <p className="text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            <p className="text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-8">
               Unlock the power of TikTok with agency-level infrastructure and precision targeting. No hidden fees, just pure scale.
             </p>
+            
+            <div className="inline-flex items-center bg-surface-container-highest p-1 rounded-xl">
+              <button 
+                onClick={() => setCurrency('USD')}
+                className={`px-6 py-2 rounded-lg text-sm font-bold transition-all ${currency === 'USD' ? 'bg-primary text-on-primary-container shadow-md' : 'text-on-surface-variant hover:text-on-surface'}`}
+              >
+                USD ($)
+              </button>
+              <button 
+                onClick={() => setCurrency('GBP')}
+                className={`px-6 py-2 rounded-lg text-sm font-bold transition-all ${currency === 'GBP' ? 'bg-primary text-on-primary-container shadow-md' : 'text-on-surface-variant hover:text-on-surface'}`}
+              >
+                GBP (£)
+              </button>
+            </div>
           </FadeIn>
         </div>
       </section>
@@ -35,7 +61,7 @@ export const Pricing = ({ setPath }: { setPath: (path: string) => void }) => {
             </div>
             <div className="mb-8">
               <div className="flex items-baseline gap-1">
-                <span className="text-4xl font-headline font-extrabold">$49</span>
+                <span className="text-4xl font-headline font-extrabold">{currency === 'USD' ? '$49' : '£39'}</span>
                 <span className="text-on-surface-variant">/mo</span>
               </div>
             </div>
@@ -69,7 +95,7 @@ export const Pricing = ({ setPath }: { setPath: (path: string) => void }) => {
             </div>
             <div className="mb-8">
               <div className="flex items-baseline gap-1">
-                <span className="text-5xl font-headline font-extrabold">$199</span>
+                <span className="text-5xl font-headline font-extrabold">{currency === 'USD' ? '$199' : '£159'}</span>
                 <span className="text-on-surface-variant">/mo</span>
               </div>
             </div>
@@ -126,7 +152,7 @@ export const Pricing = ({ setPath }: { setPath: (path: string) => void }) => {
               </li>
             </ul>
             <button 
-              onClick={() => setPath('/contact')}
+              onClick={() => handleNavigate('/contact')}
               className="w-full py-4 rounded-xl bg-surface-container-highest text-on-surface font-bold hover:bg-surface-bright transition-all"
             >
               Contact Sales
@@ -205,7 +231,7 @@ export const Pricing = ({ setPath }: { setPath: (path: string) => void }) => {
                 Create Your Account
               </button>
               <button 
-                onClick={() => setPath('/contact')}
+                onClick={() => handleNavigate('/contact')}
                 className="px-10 py-5 bg-surface-container-highest text-on-surface font-bold rounded-2xl text-lg hover:bg-surface-bright transition-all border border-outline-variant/20"
               >
                 Book a Demo
@@ -215,5 +241,6 @@ export const Pricing = ({ setPath }: { setPath: (path: string) => void }) => {
         </FadeIn>
       </section>
     </main>
+    </>
   );
 };

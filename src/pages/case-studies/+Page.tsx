@@ -1,10 +1,17 @@
 import React from 'react';
-import { FadeIn } from '../components/FadeIn';
+import { FadeIn } from '../../components/FadeIn';
+import { SEO } from '../../components/SEO';
 import { Gamepad2, TrendingUp, Play, Globe, AtSign, Video } from 'lucide-react';
+import { navigate } from 'vike/client/router';
 
-export const CaseStudies = ({ setPath }: { setPath: (path: string) => void }) => {
+export default function CaseStudies() {
   return (
-    <main className="relative overflow-hidden">
+    <>
+      <SEO 
+        title="Case Studies & Success Stories" 
+        description="Explore how we scaled global brands from five to seven figures using TikTok's unique algorithm and viral UGC." 
+      />
+      <main className="relative overflow-hidden">
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-6">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,81,104,0.08)_0%,transparent_70%)] pointer-events-none"></div>
@@ -42,7 +49,7 @@ export const CaseStudies = ({ setPath }: { setPath: (path: string) => void }) =>
             <FadeIn delay={0.1} className="md:col-span-8 group cursor-pointer">
               <div className="relative overflow-hidden rounded-xl bg-surface-container-low border border-outline-variant/5 h-full flex flex-col">
                 <div className="relative h-[400px]">
-                  <img className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Dynamic TikTok video production showcase" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqVeDSH4I-JebuntF-C0CNKRYfpJ2ORRPD5rMhHGMioRj2c8OhugAXXE5xzNOBtAvIKgoTY4vP8tB-z4hyQaQYdK_1I7lHJfyRuz0FFzQh9NiqzypPQaXjS-EzN8lpaYhru1QhQ7182J4-14cBnfxsa58Zwktk-YJ_rL6juWf_tkY5HlHDHNrnjqdFM1Db_7z_P0jX21SfnRRTTq4Mp-Ba5M6ODil79rzT-C0SCMRdYIezFeQrdMvmM36m6BigiIrkcrD9RU9TgkY"/>
+                  <img loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Dynamic TikTok video production showcase" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqVeDSH4I-JebuntF-C0CNKRYfpJ2ORRPD5rMhHGMioRj2c8OhugAXXE5xzNOBtAvIKgoTY4vP8tB-z4hyQaQYdK_1I7lHJfyRuz0FFzQh9NiqzypPQaXjS-EzN8lpaYhru1QhQ7182J4-14cBnfxsa58Zwktk-YJ_rL6juWf_tkY5HlHDHNrnjqdFM1Db_7z_P0jX21SfnRRTTq4Mp-Ba5M6ODil79rzT-C0SCMRdYIezFeQrdMvmM36m6BigiIrkcrD9RU9TgkY"/>
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
                   <div className="absolute top-6 left-6 flex gap-2">
                     <span className="px-4 py-1.5 bg-background/80 backdrop-blur-md rounded-full text-xs font-bold text-on-surface border border-outline-variant/20">E-COMMERCE</span>
@@ -91,7 +98,7 @@ export const CaseStudies = ({ setPath }: { setPath: (path: string) => void }) =>
                   </div>
                 </div>
                 <div className="mt-auto aspect-square overflow-hidden">
-                  <img className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="High energy mobile gaming interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUY1M2oeF4HxiuCl6WxdtG-1k3rc__gFiySzNFX_KKgIatlRyPBXLoIK7BGlFzMh6g2HuDnV_vE_YBfTdcUeLWBWUjrF0T9L7PkSsYR9HHX1BKM_woMYVhQb10QSWH9B1Q97K_lYm9CKPp_rdL3msSV1pWf_xAhjYowmro_8_kUXNuVRT_aqNMVfpYBUYYCc_JjF5qheQjYbBZthF7luFKukNTFoiMTxGsic7TR8NdtqpadRNteBxdj_f9HSW6bEKmgdFby_eOd1M"/>
+                  <img loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="High energy mobile gaming interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUY1M2oeF4HxiuCl6WxdtG-1k3rc__gFiySzNFX_KKgIatlRyPBXLoIK7BGlFzMh6g2HuDnV_vE_YBfTdcUeLWBWUjrF0T9L7PkSsYR9HHX1BKM_woMYVhQb10QSWH9B1Q97K_lYm9CKPp_rdL3msSV1pWf_xAhjYowmro_8_kUXNuVRT_aqNMVfpYBUYYCc_JjF5qheQjYbBZthF7luFKukNTFoiMTxGsic7TR8NdtqpadRNteBxdj_f9HSW6bEKmgdFby_eOd1M"/>
                 </div>
               </div>
             </FadeIn>
@@ -148,7 +155,7 @@ export const CaseStudies = ({ setPath }: { setPath: (path: string) => void }) =>
                   </div>
                 </div>
                 <div className="w-full md:w-64 h-64 md:h-auto rounded-lg overflow-hidden shrink-0 relative">
-                  <img className="w-full h-full object-cover" alt="Visual comparison of ad creative quality" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiPjHzrFUDiREw6DkcNLUgYxcersUumMm4sVCALUbfWRfH1V6Suk0sSuHR8VUQFFQhnwADWXyv-loKj5hN8dqzbTlSyoEDvrT_q8SJ9iIOEySVi7Lh5ZycOyiiyXZUybUkQQ_v2scJ05Yflv8L7Db2-mbQyf-7-ncVe50RPvwUy5QpTMmj1LKIO2FYs_wpHZQwjGbzXwvEIFUyIKd_NKt5oZNUYy-rVuqyfQog1hwYnyAmpK0EbVQhbCs5a-eTJfEdMXg6V8nGm-A"/>
+                  <img loading="lazy" className="w-full h-full object-cover" alt="Visual comparison of ad creative quality" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiPjHzrFUDiREw6DkcNLUgYxcersUumMm4sVCALUbfWRfH1V6Suk0sSuHR8VUQFFQhnwADWXyv-loKj5hN8dqzbTlSyoEDvrT_q8SJ9iIOEySVi7Lh5ZycOyiiyXZUybUkQQ_v2scJ05Yflv8L7Db2-mbQyf-7-ncVe50RPvwUy5QpTMmj1LKIO2FYs_wpHZQwjGbzXwvEIFUyIKd_NKt5oZNUYy-rVuqyfQog1hwYnyAmpK0EbVQhbCs5a-eTJfEdMXg6V8nGm-A"/>
                   <div className="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
                     <button className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white">
@@ -188,7 +195,7 @@ export const CaseStudies = ({ setPath }: { setPath: (path: string) => void }) =>
               Get Your Free Audit
             </button>
             <button 
-              onClick={() => setPath('/contact')}
+              onClick={() => navigate('/contact')}
               className="bg-surface-container-highest px-10 py-4 rounded-xl text-on-surface font-extrabold text-lg border border-outline-variant/10 hover:bg-surface-bright transition-colors"
             >
               View More Cases
@@ -197,5 +204,6 @@ export const CaseStudies = ({ setPath }: { setPath: (path: string) => void }) =>
         </FadeIn>
       </section>
     </main>
+    </>
   );
 };
