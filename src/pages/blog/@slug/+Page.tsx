@@ -2,6 +2,7 @@ import React from 'react';
 import { usePageContext } from 'vike-react/usePageContext';
 import { SEO } from '../../../components/SEO';
 import { FadeIn } from '../../../components/FadeIn';
+import { ShareButtons } from '../../../components/ShareButtons';
 import { getArticleBySlug } from '../articles';
 import { ArrowLeft } from 'lucide-react';
 
@@ -57,10 +58,24 @@ export default function BlogPost() {
                 </div>
             )}
 
-            <div className="prose prose-invert prose-pink lg:prose-lg max-w-none prose-img:rounded-3xl prose-headings:font-headline prose-a:text-primary pb-20">
-               {/* MDX Content is injected dynamically as a React Component here */}
-               <article.Component />
+            <div className="relative">
+              {/* Floating Share Side Bar (Desktop only) */}
+              <ShareButtons 
+                url={`https://yourdomain.com/blog/${slug}`} 
+                title={title || slug} 
+                variant="floating"
+              />
+
+              <div className="prose prose-invert prose-pink lg:prose-lg max-w-none prose-img:rounded-3xl prose-headings:font-headline prose-a:text-primary pb-10">
+                 {/* MDX Content is injected dynamically as a React Component here */}
+                 <article.Component />
+              </div>
             </div>
+
+            <ShareButtons 
+              url={`https://yourdomain.com/blog/${slug}`} 
+              title={title || slug} 
+            />
         </FadeIn>
       </main>
     </>

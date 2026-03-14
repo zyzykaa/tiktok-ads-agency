@@ -104,8 +104,9 @@ async function startServer() {
     }
   });
 
-  app.listen(port, () => {
+  app.listen(port, '0.0.0.0', () => {
     console.log(`Server running at http://localhost:${port}`);
+    console.log(`Network access enabled at http://192.168.1.6:${port}`);
   });
 }
 
