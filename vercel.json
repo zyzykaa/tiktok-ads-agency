@@ -1,10 +1,4 @@
 {
-  "functions": {
-    "dist/server/entry.mjs": {
-      "runtime": "nodejs18.x"
-    }
-  },
-  "routes": [
-    { "src": "/(.*)", "dest": "/dist/server/entry.mjs" }
-  ]
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/client"
 }
