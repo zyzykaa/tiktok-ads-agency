@@ -2,10 +2,10 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist/client",
   "framework": null,
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/api"
+      "source": "/(.*)",
+      "destination": "/api"
     }
   ]
 }
