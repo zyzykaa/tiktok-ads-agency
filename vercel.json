@@ -1,3 +1,10 @@
 {
-  "outputDirectory": "dist/client"
+  "functions": {
+    "dist/server/entry.mjs": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "routes": [
+    { "src": "/(.*)", "dest": "/dist/server/entry.mjs" }
+  ]
 }
