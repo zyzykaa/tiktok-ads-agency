@@ -293,16 +293,28 @@ export default function Home() {
               </div>
             </FadeIn>
             
-            {/* Small Bento Box 2 */}
-            <FadeIn delay={0.3} className="glass-card rounded-3xl p-8 border border-outline-variant/10">
-              <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-6">
-                <HeadphonesIcon className="w-6 h-6 text-primary" />
+            {/* Small Bento Box 2 - Robot Mascot Area */}
+            <FadeIn delay={0.3} className="glass-card rounded-3xl p-8 border border-outline-variant/10 relative overflow-hidden group">
+              <div className="relative z-10 mb-20">
+                <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-6">
+                  <HeadphonesIcon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-headline font-bold text-xl mb-3">AI & Direct Support</h3>
+                <p className="text-on-surface/60 text-sm mb-6">24/7 AI Optimization + Direct line to TikTok representatives to scale without limits.</p>
+                <div className="flex items-center gap-3 p-3 rounded-xl bg-surface-container-highest/50 border border-outline-variant/5 w-max backdrop-blur-sm">
+                  <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_8px_#22c55e]"></div>
+                  <span className="text-xs font-bold">TikBot Online</span>
+                </div>
               </div>
-              <h3 className="font-headline font-bold text-xl mb-3">Direct Rep Access</h3>
-              <p className="text-on-surface/60 text-sm mb-6">Direct line to TikTok representatives to resolve issues and get beta feature access.</p>
-              <div className="flex items-center gap-3 p-3 rounded-xl bg-surface-container-highest/50 border border-outline-variant/5">
-                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-                <span className="text-xs font-bold">Support Online</span>
+              
+              {/* Robot Mascot Image */}
+              <div className="absolute -bottom-12 -right-12 w-64 h-64 origin-bottom-right transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3">
+                <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full"></div>
+                <img 
+                  src="/assets/tiklife-robot.png" 
+                  alt="Tiklife AI Assistant" 
+                  className="w-full h-full object-contain relative z-10 drop-shadow-2xl"
+                />
               </div>
             </FadeIn>
             
