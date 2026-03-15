@@ -33,10 +33,7 @@ export const Navbar = () => {
           href="/"
           className="flex items-center gap-2 cursor-pointer transition-transform hover:scale-105" 
         >
-          <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary-container rounded-lg flex items-center justify-center shadow-lg shadow-primary/20">
-            <Zap className="w-5 h-5 text-on-primary-container fill-current" />
-          </div>
-          <span className="font-headline font-extrabold text-xl tracking-tight">TikTok Ads Agency</span>
+          <img src="/assets/logo-full.png" alt="Tiklife Logo" className="h-[40px] w-auto drop-shadow-[0_0_15px_rgba(53,251,245,0.4)]" />
         </a>
 
         {/* Desktop Nav */}

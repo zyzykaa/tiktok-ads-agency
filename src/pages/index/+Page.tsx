@@ -40,7 +40,7 @@ export default function Home() {
           <FadeIn>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-outline-variant/20 bg-surface-container/50 backdrop-blur-sm mb-8">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-              <span className="text-xs font-bold tracking-wider uppercase text-on-surface/80">TikTok Premium Agency Partner</span>
+              <span className="text-xs font-bold tracking-wider uppercase text-on-surface/80">Tiklife - Premium TikTok Partner</span>
             </div>
             
             <h1 className="font-headline font-extrabold text-5xl md:text-7xl leading-[1.1] mb-6 tracking-tight">
