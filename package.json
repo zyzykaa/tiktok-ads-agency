@@ -30,8 +30,7 @@
     "remark-mdx-frontmatter": "^5.2.0",
     "vike": "^0.4.255",
     "vike-react": "^0.6.21",
-    "vite": "^6.2.0",
-    "vite-plugin-vercel": "^9.1.1"
+    "vite": "^6.2.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",

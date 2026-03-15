@@ -1,7 +1,6 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import vike from 'vike/plugin';
-import vercel from 'vite-plugin-vercel';
 import mdx from '@mdx-js/rollup';
 import remarkFrontmatter from 'remark-frontmatter';
 import remarkMdxFrontmatter from 'remark-mdx-frontmatter';
@@ -18,7 +17,6 @@ export default defineConfig(({mode}) => {
       }), 
       react(), 
       vike({ prerender: true }),
-      vercel(),
       tailwindcss()
     ],
     define: {
