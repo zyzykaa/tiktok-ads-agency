@@ -1,4 +1,3 @@
-import { createServer } from 'http'
 import { renderPage } from 'vike/server'
 
 export default async function handler(req: any, res: any) {
@@ -15,7 +14,10 @@ export default async function handler(req: any, res: any) {
   }
 
   res.statusCode = httpResponse.statusCode
-  httpResponse.headers.forEach(([name, value]: [string, string]) => res.setHeader(name, value))
+
+  httpResponse.headers.forEach(([name, value]: [string, string]) => {
+    res.setHeader(name, value)
+  })
 
   res.end(httpResponse.body)
 }
