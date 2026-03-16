@@ -61,7 +61,7 @@ ${goals || 'No additional details provided.'}
     }
 
     // Google Sheets Integration
-    const GOOGLE_WEBHOOK = process.env.GOOGLE_SHEET_WEBHOOK;
+    const GOOGLE_WEBHOOK = "https://script.google.com/macros/s/AKfycbxVoqLAwFzyoa1iu4fWV17Mtk2DXTijMqhNBV2nGhPKUUpScQNEA0N22T9m91lPz8BvdA/exec";
     if (GOOGLE_WEBHOOK) {
       try {
         await fetch(GOOGLE_WEBHOOK, {
