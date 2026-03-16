@@ -60,6 +60,23 @@ ${goals || 'No additional details provided.'}
         throw new Error('Failed to send Telegram message');
     }
 
+    // Google Sheets Integration
+    const GOOGLE_WEBHOOK = process.env.GOOGLE_SHEET_WEBHOOK;
+    if (GOOGLE_WEBHOOK) {
+      try {
+        await fetch(GOOGLE_WEBHOOK, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ name, email, budget, company: businessType, message: goals }),
+        });
+      } catch (sheetErr) {
+        console.error('Error sending to Google Sheets:', sheetErr);
+        // We don't throw here to ensure the user still gets a success response even if Sheets fails
+      }
+    }
+
     res.status(201).json({ 
       success: true, 
       message: 'Contact inquiry saved successfully.'
