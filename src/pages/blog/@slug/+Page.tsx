@@ -3,6 +3,7 @@ import { usePageContext } from 'vike-react/usePageContext';
 import { SEO } from '../../../components/SEO';
 import { FadeIn } from '../../../components/FadeIn';
 import { ShareButtons } from '../../../components/ShareButtons';
+import BlogLeadForm from '../../../components/BlogLeadForm';
 import { getArticleBySlug } from '../articles';
 import { ArrowLeft } from 'lucide-react';
 
@@ -70,6 +71,9 @@ export default function BlogPost() {
                  {/* MDX Content is injected dynamically as a React Component here */}
                  <article.Component />
               </div>
+              
+              {/* Embedded Lead Form */}
+              <BlogLeadForm />
             </div>
 
             <ShareButtons 

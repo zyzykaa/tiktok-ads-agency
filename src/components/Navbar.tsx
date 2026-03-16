@@ -33,7 +33,7 @@ export const Navbar = () => {
           href="/"
           className="flex items-center gap-2 cursor-pointer transition-transform hover:scale-105" 
         >
-          <img src="/assets/logo-full.png" alt="Tiklife Logo" className="h-[40px] w-auto drop-shadow-[0_0_15px_rgba(53,251,245,0.4)]" />
+          <img src="/assets/logo-full.png" alt="Tiklife Logo" className="h-[52px] w-auto drop-shadow-[0_0_15px_rgba(53,251,245,0.4)]" />
         </a>
 
         {/* Desktop Nav */}

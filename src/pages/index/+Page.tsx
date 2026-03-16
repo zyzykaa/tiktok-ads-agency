@@ -2,8 +2,10 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { FadeIn } from '../../components/FadeIn';
 import { SEO } from '../../components/SEO';
-import { Zap, TrendingUp, CheckCircle, ArrowRight, Globe, HeadphonesIcon, Rocket } from 'lucide-react';
+import { Zap, TrendingUp, CheckCircle, ArrowRight, Globe, Headphones as HeadphonesIcon, Rocket } from 'lucide-react';
 import { navigate } from 'vike/client/router';
+import { ErrorBoundary } from '../../components/ErrorBoundary';
+import TikTokViralPhone from '../../components/TikTokViralPhone';
 
 export default function Home() {
   const handleNavigate = (path: string) => {
@@ -29,6 +31,7 @@ export default function Home() {
         description="We provide premium agency ad accounts, scroll-stopping creatives, and data-driven media buying to scale your ROI on TikTok." 
         schemaData={homeSchema}
       />
+      <ErrorBoundary>
       <main className="pt-20">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
@@ -84,88 +87,7 @@ export default function Home() {
           </FadeIn>
           
           <FadeIn delay={0.2} className="relative hidden lg:block">
-            <div className="relative w-full aspect-[9/16] max-w-sm mx-auto rounded-[2.5rem] border-[6px] border-surface-container-highest shadow-[0_0_50px_rgba(255,81,104,0.15)] overflow-hidden bg-black group transition-transform duration-500 hover:-translate-y-2">
-              {/* Creator Video Background */}
-              <img 
-                src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop" 
-                alt="Creator Content" 
-                className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-1000" 
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30"></div>
-              
-              {/* Top Bar: LIVE Tag */}
-              <div className="absolute top-6 left-6 right-6 flex justify-between items-center z-20">
-                <div className="px-3 py-1.5 bg-black/40 backdrop-blur-md rounded-full text-white text-xs font-bold border border-white/10 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_10px_#FF5168]"></span>
-                  LIVE
-                </div>
-                <div className="px-3 py-1.5 bg-black/40 backdrop-blur-md rounded-full text-white text-xs font-bold border border-white/10">
-                  50K Viewers
-                </div>
-              </div>
-
-              {/* Floating Viral Stickers */}
-              <motion.div 
-                animate={{ y: [0, -15, 0], rotate: [0, -5, 0] }} 
-                transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                className="absolute top-1/4 -left-4 bg-surface-container-highest p-3 rounded-2xl shadow-xl shadow-primary/20 rotate-[-12deg] z-30"
-              >
-                <div className="font-headline font-black text-xl text-primary drop-shadow-[0_0_8px_rgba(255,81,104,0.5)]">ROAS 4.5x</div>
-              </motion.div>
-
-              <motion.div 
-                animate={{ y: [0, 20, 0], rotate: [0, 10, 0] }} 
-                transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
-                className="absolute top-[40%] -right-6 bg-surface-container-highest p-4 rounded-full shadow-xl shadow-secondary/20 z-30"
-              >
-                <TrendingUp className="w-8 h-8 text-secondary-container" />
-              </motion.div>
-
-              {/* Right Sidebar UI (TikTok Style) */}
-              <div className="absolute bottom-24 right-4 flex flex-col items-center gap-6 text-white drop-shadow-md z-20">
-                <div className="relative group/avatar cursor-pointer hover:scale-110 transition-transform">
-                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop" alt="Creator Profile" className="w-12 h-12 rounded-full border-2 border-white object-cover" />
-                  <div className="absolute -bottom-2 inset-x-0 mx-auto w-5 h-5 bg-primary text-white flex items-center justify-center rounded-full text-xs font-bold font-headline border border-white transition-colors hover:bg-white hover:text-primary"><span className="-mt-0.5">+</span></div>
-                </div>
-                
-                <div className="flex flex-col items-center gap-1 group/icon cursor-pointer hover:scale-110 transition-transform">
-                  <div className="w-10 h-10 rounded-full bg-black/20 flex items-center justify-center backdrop-blur-sm group-hover/icon:text-primary transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7"><path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" /></svg>
-                  </div>
-                  <span className="text-xs font-semibold drop-shadow">124.5K</span>
-                </div>
-
-                <div className="flex flex-col items-center gap-1 cursor-pointer hover:scale-110 transition-transform">
-                  <div className="w-10 h-10 rounded-full bg-black/20 flex items-center justify-center backdrop-blur-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7"><path fillRule="evenodd" d="M4.804 21.644A6.707 6.707 0 006 21.75a6.721 6.721 0 003.583-1.029c.774.182 1.584.279 2.417.279 5.322 0 9.75-3.97 9.75-9 0-5.03-4.428-9-9.75-9s-9.75 3.97-9.75 9c0 2.409 1.025 4.587 2.674 6.192.232.226.277.428.254.543a3.73 3.73 0 01-.814 1.686.75.75 0 00.44 1.223zM8.25 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM10.875 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zm4.875-1.125a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z" clipRule="evenodd" /></svg>
-                  </div>
-                  <span className="text-xs font-semibold drop-shadow">1,023</span>
-                </div>
-
-                <div className="flex flex-col items-center gap-1 cursor-pointer hover:scale-110 transition-transform">
-                  <div className="w-10 h-10 rounded-full bg-black/20 flex items-center justify-center backdrop-blur-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7"><path fillRule="evenodd" d="M15.75 4.5a3 3 0 11.825 2.066l-8.421 4.679a3.002 3.002 0 010 1.51l8.421 4.679a3 3 0 11-.729 1.31l-8.421-4.678a3 3 0 110-4.132l8.421-4.679a3 3 0 01-.096-.755z" clipRule="evenodd" /></svg>
-                  </div>
-                  <span className="text-xs font-semibold drop-shadow">Share</span>
-                </div>
-              </div>
-
-              {/* Bottom Info Area */}
-              <div className="absolute bottom-6 left-4 right-16 text-white drop-shadow-md z-20">
-                <h3 className="font-bold mb-1 text-base">@tiklife_agency</h3>
-                <p className="text-sm opacity-90 leading-tight mb-2">Scaling <span className="text-primary font-bold">#skincare</span> brands to $100K/day using creator ads. <br/> Want the exact framework? 👇</p>
-                <div className="flex items-center gap-2 text-[11px] font-semibold py-1.5 px-3 bg-black/40 backdrop-blur-md rounded-lg w-max border border-white/10 overflow-hidden">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4"><path fillRule="evenodd" d="M19.952 1.651a.75.75 0 01.298.599V16.303a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.403-4.909l2.311-.66a1.5 1.5 0 001.088-1.442V6.994l-9 2.572v9.737a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.402-4.909l2.31-.66a1.5 1.5 0 001.088-1.442V9.017 5.25a.75.75 0 01.544-.721l10.5-3a.75.75 0 01.658.122z" clipRule="evenodd" /></svg>
-                  <div className="overflow-hidden w-[120px]">
-                    <div className="animate-[scroll_5s_linear_infinite] whitespace-nowrap">Original Sound - Viral Trends 🔥</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Decorative elements */}
-            <div className="absolute -top-10 -right-10 w-32 h-32 bg-secondary-container/20 rounded-full blur-2xl"></div>
-            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-primary/20 rounded-full blur-2xl"></div>
+            <TikTokViralPhone />
           </FadeIn>
         </div>
       </section>
@@ -308,12 +230,17 @@ export default function Home() {
               </div>
               
               {/* Robot Mascot Image */}
-              <div className="absolute -bottom-12 -right-12 w-64 h-64 origin-bottom-right transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3">
+              <div className="absolute -bottom-8 -right-8 w-64 h-64 origin-bottom-right transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3">
                 <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full"></div>
                 <img 
                   src="/assets/tiklife-robot.png" 
                   alt="Tiklife AI Assistant" 
                   className="w-full h-full object-contain relative z-10 drop-shadow-2xl"
+                  onError={(e) => {
+                    // Fallback to a placeholder gradient if the image is missing from /public/assets
+                    e.currentTarget.style.display = 'none';
+                    e.currentTarget.parentElement!.innerHTML += '<div class="absolute inset-0 m-auto w-32 h-32 rounded-full bg-gradient-to-tr from-primary to-secondary animate-pulse shadow-[0_0_40px_rgba(255,81,104,0.6)] flex items-center justify-center"><span class="text-4xl">🤖</span></div>';
+                  }}
                 />
               </div>
             </FadeIn>
@@ -389,6 +316,7 @@ export default function Home() {
         </FadeIn>
       </section>
     </main>
+    </ErrorBoundary>
     </>
   );
 };

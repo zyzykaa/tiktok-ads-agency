@@ -32,6 +32,11 @@
   --color-secondary-fixed: var(--secondary-fixed);
   --color-tertiary: var(--tertiary);
   --color-tertiary-container: var(--tertiary-container);
+
+  /* Custom Brand Additions */
+  --color-tiklife-navy: #0A1128;
+  --color-tiklife-cyan: #00E5FF;
+  --background-image-brand-gradient: linear-gradient(135deg, #1A56DB 0%, #00E5FF 100%);
 }
 
 :root {
