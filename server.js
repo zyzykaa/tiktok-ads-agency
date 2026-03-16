@@ -26,32 +26,12 @@ db.exec(`
 
 app.use(express.json());
 
-// API Endpoint to submit contact form
-app.post('/api/contact', (req, res) => {
-  try {
-    const { name, email, budget, businessType, goals } = req.body;
-    
-    // Basic validation
-    if (!name || !email) {
-      return res.status(400).json({ error: 'Name and Email are required' });
-    }
+import 'dotenv/config';
+import contactHandler from './api/contact.js';
 
-    const insert = db.prepare(`
-      INSERT INTO contacts (name, email, budget, businessType, goals)
-      VALUES (?, ?, ?, ?, ?)
-    `);
-    
-    const info = insert.run(name, email, budget, businessType, goals);
-
-    res.status(201).json({ 
-      success: true, 
-      id: info.lastInsertRowid,
-      message: 'Contact inquiry saved successfully.'
-    });
-  } catch (err) {
-    console.error('Error saving contact:', err);
-    res.status(500).json({ error: 'Internal server error' });
-  }
+// API Endpoint to submit contact form (Local routing to Serverless function logic)
+app.post('/api/contact', async (req, res) => {
+  await contactHandler(req, res);
 });
 
 // For basic health check
