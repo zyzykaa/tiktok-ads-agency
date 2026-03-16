@@ -1,3 +1,5 @@
+import { waitUntil } from '@vercel/functions';
+
 export default async function handler(req, res) {
   // CORS setup for Vercel
   res.setHeader('Access-Control-Allow-Credentials', true)
@@ -44,8 +46,8 @@ ${goals || 'No additional details provided.'}
   `.trim();
 
   try {
-    // Send to Telegram asynchronously
-    fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+    // 1. Prepare Telegram request
+    const telegramPromise = fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -55,26 +57,33 @@ ${goals || 'No additional details provided.'}
         text: message,
         parse_mode: 'HTML',
       }),
-    }).catch(err => console.error('Error sending to Telegram:', err));
+    });
 
-    // Google Sheets Integration
+    // 2. Prepare Google Sheets request
     const GOOGLE_WEBHOOK = "https://script.google.com/macros/s/AKfycbxVoqLAwFzyoa1iu4fWV17Mtk2DXTijMqhNBV2nGhPKUUpScQNEA0N22T9m91lPz8BvdA/exec";
+    let sheetsPromise = Promise.resolve(); // Default to resolved if no webhook
     if (GOOGLE_WEBHOOK) {
-      fetch(GOOGLE_WEBHOOK, {
+      sheetsPromise = fetch(GOOGLE_WEBHOOK, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ name, email, budget, company: businessType, message: goals }),
-      }).catch(sheetErr => console.error('Error sending to Google Sheets:', sheetErr));
+      });
     }
 
+    // 3. Use Vercel's waitUntil to keep the exact background tasks alive safely
+    waitUntil(Promise.all([telegramPromise, sheetsPromise]).catch(err => {
+      console.error("Error executing background task:", err);
+    }));
+
+    // 4. Respond to client IMMEDIATELY
     res.status(201).json({ 
       success: true, 
       message: 'Contact inquiry saved successfully.'
     });
   } catch (err) {
-    console.error('Error sending to Telegram:', err);
+    console.error('Error in handler function:', err);
     res.status(500).json({ error: 'Internal server error' });
   }
 }
