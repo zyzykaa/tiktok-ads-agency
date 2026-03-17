@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FadeIn } from '../../components/FadeIn';
 import { SEO } from '../../components/SEO';
 import { MessageCircle, Send, Clock, Video, ChevronLeft, ChevronRight, Mail, Facebook } from 'lucide-react';
+import { SITE_URL } from '../../lib/site';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -44,7 +45,7 @@ export default function Contact() {
     "@type": "ContactPage",
     "name": "Contact TikTok Ads Agency",
     "description": "Ready to scale? Let's build your viral engine together. Book a discovery call with our TikTok Ads strategists.",
-    "url": "https://your-tiktok-agency.com/contact",
+    "url": `${SITE_URL}/contact`,
     "mainEntity": {
       "@type": "ProfessionalService",
       "name": "TikTok Ads Agency",
@@ -58,7 +59,7 @@ export default function Contact() {
     <>
       <SEO 
         title="Contact Us & Book Strategy Call" 
-        description="Ready to scale? Let's build your viral engine together. Book a discovery call with our TikTok Ads strategists." 
+        description="Ready to scale? Let’s build your TikTok growth engine. Book a strategy call with our team." 
         schemaData={contactSchema}
       />
       <main className="max-w-7xl mx-auto px-6 py-16 md:py-24 relative overflow-hidden">
@@ -71,11 +72,11 @@ export default function Contact() {
           <div>
             <span className="text-sm font-label text-secondary tracking-widest uppercase mb-4 block font-bold">Ready to scale?</span>
             <h1 className="font-headline text-5xl md:text-7xl font-extrabold leading-[1.1] tracking-tight text-on-surface">
-              Let's build your <span className="text-primary">viral engine</span> together.
+              Let’s build your <span className="text-primary">TikTok growth engine</span>.
             </h1>
           </div>
           <p className="text-on-surface-variant text-lg md:text-xl max-w-xl leading-relaxed">
-            Our team of specialists is ready to transform your TikTok presence into a high-converting sales machine. Reach out and let's discuss your growth strategy.
+            Our team is ready to turn your TikTok presence into a high‑converting revenue channel. Tell us your goals and we will build the plan.
           </p>
           <div className="flex flex-wrap gap-4 pt-4">
             <a className="flex items-center gap-3 px-6 py-4 bg-surface-container rounded-xl border border-[rgba(175,255,251,0.2)] hover:bg-surface-container-high transition-all group lg:min-w-[200px]" href="https://wa.me/84969532635" target="_blank" rel="noreferrer">
@@ -103,7 +104,7 @@ export default function Contact() {
               <Facebook className="text-secondary w-6 h-6" />
               <div className="flex flex-col">
                 <span className="text-xs text-on-surface-variant font-label uppercase tracking-wider">Facebook</span>
-                <span className="font-bold text-on-surface">Phạm Trọng Hiệp</span>
+                <span className="font-bold text-on-surface">Pham Trong Hiep</span>
               </div>
             </a>
           </div>
@@ -170,13 +171,13 @@ export default function Contact() {
               </div>
             </div>
             <div className="space-y-2">
-              <label className="text-sm font-label text-on-surface-variant ml-1">Tell us about your goals</label>
+                <label className="text-sm font-label text-on-surface-variant ml-1">Tell us about your goals</label>
               <textarea 
                 name="goals"
                 value={formData.goals}
                 onChange={handleChange}
                 className="w-full bg-surface-container-lowest border border-outline-variant/30 shadow-sm rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary/50 text-on-surface placeholder:text-on-surface-variant/50 resize-none transition-all"
-                placeholder="How can we help you scale?" 
+                placeholder="What do you want to scale next?" 
                 rows={4}
               ></textarea>
             </div>
@@ -185,17 +186,17 @@ export default function Contact() {
               type="submit"
               disabled={status === 'loading'}
             >
-              {status === 'loading' ? 'Sending...' : 'Send Inquiry'}
+              {status === 'loading' ? 'Sending...' : 'Send Request'}
             </button>
             
             {status === 'success' && (
               <div className="p-4 bg-green-500/20 text-green-300 rounded-lg text-center font-medium mt-4">
-                Message sent successfully! We'll be in touch soon.
+                Message sent successfully! We will be in touch soon.
               </div>
             )}
             {status === 'error' && (
               <div className="p-4 bg-red-500/20 text-red-300 rounded-lg text-center font-medium mt-4">
-                Oops! Something went wrong. Please try again later.
+                Something went wrong. Please try again.
               </div>
             )}
           </form>
@@ -208,11 +209,11 @@ export default function Contact() {
         <FadeIn delay={0.3} className="md:col-span-2 glass-card rounded-xl border border-outline-variant/10 overflow-hidden flex flex-col md:flex-row">
           <div className="p-8 md:w-1/2 space-y-6">
             <h3 className="font-headline text-3xl font-bold text-on-surface leading-tight">Book a Strategy Call</h3>
-            <p className="text-on-surface-variant">Pick a time that works for you and our head of strategy will walk you through our TikTok framework.</p>
+            <p className="text-on-surface-variant">Pick a time that works for you and we will walk through your TikTok growth plan.</p>
             <div className="space-y-4 pt-4">
               <div className="flex items-center gap-3">
                 <Clock className="text-secondary w-6 h-6" />
-                <span className="text-on-surface">30-minute discovery</span>
+                <span className="text-on-surface">30‑minute discovery</span>
               </div>
               <div className="flex items-center gap-3">
                 <Video className="text-secondary w-6 h-6" />
@@ -222,7 +223,7 @@ export default function Contact() {
           </div>
           <div className="bg-surface-container-low p-6 md:w-1/2 border-l border-outline-variant/10">
             <div className="flex justify-between items-center mb-6">
-              <span className="font-bold text-on-surface">Oct 24, 2024</span>
+              <span className="font-bold text-on-surface">Mar 17, 2026</span>
               <div className="flex gap-2">
                 <button className="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface">
                   <ChevronLeft className="w-4 h-4" />
@@ -273,7 +274,7 @@ export default function Contact() {
             </div>
             <div className="space-y-1">
               <h4 className="text-4xl font-extrabold text-on-surface font-headline">500M+</h4>
-              <p className="text-on-surface-variant">Impressions managed monthly for our top-tier agency clients.</p>
+              <p className="text-on-surface-variant">Impressions managed monthly for top‑tier agency clients.</p>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-outline-variant/10">

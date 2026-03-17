@@ -20,7 +20,7 @@ export default function BlogLeadForm() {
           <CheckCircle className="w-8 h-8 text-tiklife-cyan" />
         </div>
         <h3 className="text-2xl font-headline font-bold text-white mb-2">Application Received!</h3>
-        <p className="text-on-surface/80">Our agency team will contact you shortly to set up your premium TikTok ad account.</p>
+        <p className="text-on-surface/80">Our team will contact you shortly to set up your premium TikTok ad account.</p>
       </div>
     );
   }
@@ -37,10 +37,10 @@ export default function BlogLeadForm() {
           </div>
           <h3 className="text-2xl md:text-3xl font-headline font-black text-white mb-3">Ready to scale beyond limits?</h3>
           <p className="text-slate-400 text-sm mb-6 max-w-md">
-            Stop dealing with sudden bans and spending caps. Get a premium TikTok Agency account with a flat 3% fee today.
+            Stop dealing with bans and spend caps. Get a premium TikTok agency account with a flat 3% fee.
           </p>
           <ul className="space-y-2 mb-6 md:mb-0">
-            {['Unlimited daily spend from Day 1', 'Direct rep support & appeals', 'Target global markets easily'].map((item, i) => (
+            {['Higher daily spend from day one', 'Direct rep support & appeals', 'Target global markets fast'].map((item, i) => (
               <li key={i} className="flex items-center gap-2 text-sm text-slate-300">
                 <CheckCircle className="w-4 h-4 text-tiklife-cyan" /> {item}
               </li>

@@ -13,7 +13,7 @@ export default function PrivacyPolicy() {
         <FadeIn>
           <h1 className="font-headline text-4xl md:text-5xl font-extrabold mb-8">Privacy Policy</h1>
           <div className="prose prose-invert prose-p:text-on-surface-variant prose-headings:text-on-surface max-w-none">
-            <p className="text-sm text-on-surface-variant/70 mb-8">Last Updated: October 24, 2024</p>
+            <p className="text-sm text-on-surface-variant/70 mb-8">Last Updated: March 17, 2026</p>
             
             <section className="mb-8">
               <h2 className="text-2xl font-bold mb-4 mt-8">1. Introduction</h2>
@@ -41,7 +41,7 @@ export default function PrivacyPolicy() {
               <p className="mb-4">We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:</p>
               <ul className="list-disc pl-6 mb-4 space-y-2">
                 <li>Where we need to perform the contract we are about to enter into or have entered into with you.</li>
-                <li>Where it is necessary for our legitimate interests (or those of a third party) and your interests and fundamental rights do not override those интересы.</li>
+                <li>Where it is necessary for our legitimate interests (or those of a third party) and your interests and fundamental rights do not override those interests.</li>
                 <li>Where we need to comply with a legal or regulatory obligation.</li>
               </ul>
               <p className="mb-4">Generally, we do not rely on consent as a legal basis for processing your personal data other than in relation to sending third party direct marketing communications to you via email or text message. You have the right to withdraw consent to marketing at any time by contacting us.</p>

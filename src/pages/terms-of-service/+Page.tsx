@@ -13,7 +13,7 @@ export default function TermsOfService() {
         <FadeIn>
           <h1 className="font-headline text-4xl md:text-5xl font-extrabold mb-8">Terms of Service</h1>
           <div className="prose prose-invert prose-p:text-on-surface-variant prose-headings:text-on-surface max-w-none">
-            <p className="text-sm text-on-surface-variant/70 mb-8">Last Updated: October 24, 2024</p>
+            <p className="text-sm text-on-surface-variant/70 mb-8">Last Updated: March 17, 2026</p>
             
             <section className="mb-8">
               <h2 className="text-2xl font-bold mb-4 mt-8">1. Agreement to Terms</h2>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// --- SVG Icons tối ưu ---
+// Optimized SVG icons
 const HeartIcon = () => <svg className="w-7 h-7 text-white drop-shadow-md" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>;
 const CommentIcon = () => <svg className="w-7 h-7 text-white drop-shadow-md" fill="currentColor" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2v10z"/></svg>;
 const ShareIcon = () => <svg className="w-7 h-7 text-white drop-shadow-md" fill="currentColor" viewBox="0 0 24 24"><path d="M15 5l6 6-6 6v-4c-5 0-8 1.5-11 4.5 1.5-4 4.5-8 11-8V5z"/></svg>;
@@ -70,11 +70,10 @@ export default function TikTokViralPhone() {
                   <div className="w-1.5 h-1.5 bg-white rounded-full"></div> LIVE
                 </div>
                 <div className="bg-black/40 backdrop-blur-sm text-white text-xs font-semibold px-2 py-1 rounded border border-white/10">
-                  👁 50K Viewers
+                  50K Viewers
                 </div>
               </div>
 
-              {/* Hook Text Nhấn mạnh (Đập vào mắt) */}
               <motion.div 
                 initial={{ y: -20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -83,7 +82,7 @@ export default function TikTokViralPhone() {
               >
                 <div className="bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2.5 rounded-xl shadow-2xl text-center">
                   <span className="text-white font-bold text-sm tracking-wide">
-                    Scaling brands to <span className="text-[#00E5FF] font-black text-base drop-shadow-[0_0_8px_rgba(0,229,255,0.8)]">$100K/day</span> 🚀
+                    Scaling brands to <span className="text-[#00E5FF] font-black text-base drop-shadow-[0_0_8px_rgba(0,229,255,0.8)]">$100K/day</span>
                   </span>
                 </div>
               </motion.div>
@@ -103,7 +102,7 @@ export default function TikTokViralPhone() {
                   transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                   className="relative w-32 h-32 flex justify-center items-center"
                 >
-                  <img src="/assets/logo-full.png" alt="Tiklife Logo" className="w-32 h-auto drop-shadow-[0_0_20px_rgba(53,251,245,0.8)]" />
+                  <img src="/assets/logo-white.png" alt="Tiklife Logo" className="block w-32 h-auto drop-shadow-[0_0_20px_rgba(53,251,245,0.8)]" width="320" height="128" />
                 </motion.div>
               </div>
 
@@ -124,10 +123,10 @@ export default function TikTokViralPhone() {
                 <h3 className="text-white font-bold text-sm mb-1 drop-shadow-md">@tiklife_agency</h3>
                 <p className="text-white/90 text-xs leading-snug drop-shadow-md">
                   Scaling #skincare brands to $100K/day using creator ads.<br/>
-                  Want the exact framework? 👇
+                  Want the exact framework? Tap below.
                 </p>
                 <div className="mt-2 flex items-center gap-2 text-white/70 text-[10px]">
-                  <span>🎵 Original Audio - Tiklife</span>
+                  <span>Original Audio - Tiklife</span>
                 </div>
               </div>
             </motion.div>
@@ -162,7 +161,7 @@ export default function TikTokViralPhone() {
               {/* Hiệu ứng Nổ nhãn dán đơn hàng (Pop-up Explosions) */}
               {[
                 { top: '25%', left: '10%', text: '+$129', bg: 'bg-emerald-500/20 border-emerald-400 text-emerald-400', delay: 0.1 },
-                { top: '65%', right: '10%', text: 'ROAS 4.5x 🚀', bg: 'bg-[#00E5FF]/20 border-[#00E5FF] text-[#00E5FF]', delay: 0.3 },
+                { top: '65%', right: '10%', text: 'ROAS 4.5x', bg: 'bg-[#00E5FF]/20 border-[#00E5FF] text-[#00E5FF]', delay: 0.3 },
                 { top: '35%', right: '15%', text: '+$3,450', bg: 'bg-emerald-500/20 border-emerald-400 text-emerald-400', delay: 0.5 },
                 { top: '75%', left: '15%', text: 'Conversion!', bg: 'bg-[#FF0050]/20 border-[#FF0050] text-[#FF0050]', delay: 0.7 },
                 { top: '50%', left: '5%', text: 'New Order', bg: 'bg-purple-500/20 border-purple-400 text-purple-400', delay: 0.9 },

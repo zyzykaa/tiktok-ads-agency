@@ -11,7 +11,7 @@ export const Footer = () => {
               href="/"
               className="flex items-center gap-2 mb-6 cursor-pointer hover:opacity-80 transition-opacity"
             >
-              <img src="/assets/logo-full.png" alt="Tiklife Logo" className="h-[48px] w-auto drop-shadow-[0_0_15px_rgba(53,251,245,0.2)]" />
+              <img src="/assets/logo-white.png" alt="Tiklife Logo" className="block h-[48px] w-auto drop-shadow-[0_0_15px_rgba(53,251,245,0.2)]" width="180" height="48" />
             </a>
             <p className="text-sm text-on-surface/40 leading-relaxed max-w-xs">
               The elite partner for brands looking to dominate short-form video and social commerce.
@@ -55,7 +55,7 @@ export const Footer = () => {
         </div>
         
         <div className="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-outline-variant/5">
-          <p className="text-xs text-on-surface/30">© 2026 Tiklife. All rights reserved.</p>
+          <p className="text-xs text-on-surface/30">(c) 2026 Tiklife. All rights reserved.</p>
           <div className="flex gap-6 mt-6 md:mt-0">
             <button aria-label="Share this page" className="text-on-surface/30 hover:text-primary transition-colors">
               <Share2 className="w-5 h-5" />

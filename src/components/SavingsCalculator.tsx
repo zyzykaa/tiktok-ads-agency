@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 export default function SavingsCalculator() {
-  const [adSpend, setAdSpend] = useState(50000); // Mặc định khách chi $50k/tháng
+  const [adSpend, setAdSpend] = useState(50000); // Default: $50k/mo ad spend
 
-  // Đối thủ: Phí duy trì (Retainer) $2000/tháng + Phí 8% (Giá trung bình ở Mỹ)
+  // Traditional agency: $2,000 retainer + 8% fee (typical US average)
   const traditionalFee = 2000 + (adSpend * 0.08); 
-  // Tiklife: 0 Retainer, Phí 3% Flat
+  // Tiklife: 0 retainer, 3% flat fee
   const tiklifeFee = adSpend * 0.03;
   
   const monthlySavings = traditionalFee - tiklifeFee;
@@ -17,18 +17,17 @@ export default function SavingsCalculator() {
 
   return (
     <div className="max-w-4xl mx-auto p-8 md:p-12 bg-tiklife-navy rounded-3xl shadow-2xl font-sans text-white my-16 border border-white/10 relative overflow-hidden">
-      {/* Hiệu ứng Glow nền (Màu Cyan của logo) */}
+      {/* Cyan glow background */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-tiklife-cyan rounded-full mix-blend-screen filter blur-[120px] opacity-20 pointer-events-none"></div>
 
       <div className="relative z-10 text-center mb-12">
         <div className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold text-tiklife-cyan uppercase tracking-widest mb-4">
           Interactive Tool
         </div>
-        <h2 className="text-3xl md:text-5xl font-black text-white mb-4 tracking-tight">Stop Funding Your Agency's Ping-Pong Table</h2>
-        <p className="text-slate-400 text-lg">Drag the slider to calculate exactly how much profit you're losing to hidden retainers and inflated percentages.</p>
+        <h2 className="text-3xl md:text-5xl font-black text-white mb-4 tracking-tight">MATH DOESN'T LIE</h2>
+        <p className="text-slate-400 text-lg">Drag the slider to see how much profit you hand away to retainers and percentage fees.</p>
       </div>
 
-      {/* Thanh trượt ngân sách */}
       <div className="relative z-10 mb-12 bg-white/5 p-6 md:p-8 rounded-3xl border border-white/10 backdrop-blur-sm shadow-xl">
         <label className="flex flex-col sm:flex-row justify-between sm:items-end mb-8 gap-4">
           <span className="text-sm font-bold text-slate-300 uppercase tracking-widest flex items-center gap-2">
@@ -97,10 +96,9 @@ export default function SavingsCalculator() {
 
       {/* Bảng so sánh (Us vs Them) */}
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-        {/* Cột Đối thủ */}
         <div className="bg-slate-900/50 p-6 rounded-2xl border border-red-500/20">
           <h3 className="text-slate-400 font-bold mb-4 uppercase tracking-wider text-sm flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-red-500"></span> Traditional US Agency
+            <span className="w-2 h-2 rounded-full bg-red-500"></span> Traditional Agency
           </h3>
           <div className="space-y-3 mb-6">
             <div className="flex justify-between text-sm"><span className="text-slate-500">Monthly Retainer</span><span className="text-slate-300">$2,000</span></div>
@@ -112,7 +110,6 @@ export default function SavingsCalculator() {
           </div>
         </div>
 
-        {/* Cột Tiklife */}
         <div className="bg-brand-gradient p-[1px] rounded-2xl shadow-[0_0_30px_rgba(0,229,255,0.15)] transform md:-translate-y-2 transition-transform h-full">
           <div className="bg-tiklife-navy h-full w-full rounded-2xl p-6 relative overflow-hidden flex flex-col">
             <div className="absolute top-0 right-0 bg-tiklife-cyan text-tiklife-navy text-[10px] font-black uppercase px-3 py-1 rounded-bl-lg">Tiklife Partner</div>

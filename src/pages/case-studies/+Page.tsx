@@ -9,7 +9,7 @@ export default function CaseStudies() {
     <>
       <SEO 
         title="Case Studies & Success Stories" 
-        description="Explore how we scaled global brands from five to seven figures using TikTok's unique algorithm and viral UGC." 
+        description="See how we scale brands from five to seven figures with TikTok‑native creative and disciplined media buying." 
       />
       <main className="relative overflow-hidden">
       {/* Hero Section */}
@@ -27,7 +27,7 @@ export default function CaseStudies() {
                   Proven Results.
                 </h1>
                 <p className="text-on-surface-variant text-lg leading-relaxed max-w-lg">
-                  We don't just run ads; we engineer growth loops. Explore how we scaled global brands from five to seven figures using TikTok's unique algorithm.
+                  We do more than run ads. We build growth loops that scale. See how we take brands from five to seven figures on TikTok.
                 </p>
               </FadeIn>
             </div>
@@ -57,7 +57,7 @@ export default function CaseStudies() {
                   </div>
                   <div className="absolute bottom-6 left-6 right-6">
                     <h3 className="font-headline text-3xl font-extrabold mb-2">Velvet Aura Skincare</h3>
-                    <p className="text-on-surface/70 line-clamp-2 max-w-xl">Scaling a boutique skincare brand to $500k/mo through creator-led content and high-frequency ad refreshing.</p>
+                    <p className="text-on-surface/70 line-clamp-2 max-w-xl">Scaled a boutique skincare brand to $500k/mo with creator‑led content and relentless creative testing.</p>
                   </div>
                 </div>
                 <div className="p-8 grid grid-cols-3 gap-4 bg-surface-container">
@@ -85,7 +85,7 @@ export default function CaseStudies() {
                     <Gamepad2 className="text-secondary w-6 h-6" />
                   </div>
                   <h3 className="font-headline text-2xl font-extrabold mb-4">Quest RPG Mobile</h3>
-                  <p className="text-on-surface/60 text-sm mb-8 leading-relaxed">Reducing Cost Per Install by 45% using native gameplay trends and influencer whitelisting.</p>
+                  <p className="text-on-surface/60 text-sm mb-8 leading-relaxed">Cut CPI by 45% using native gameplay trends and creator whitelisting.</p>
                   <div className="space-y-4">
                     <div className="flex justify-between items-end border-b border-outline-variant/10 pb-2">
                       <span className="text-on-surface/40 text-xs">CPI Reduction</span>
@@ -111,7 +111,7 @@ export default function CaseStudies() {
                   <span className="text-secondary text-[10px] uppercase tracking-widest font-bold">Live Data Performance</span>
                 </div>
                 <h3 className="font-headline text-2xl font-extrabold mb-4">FitTrack Pro</h3>
-                <p className="text-on-surface/60 text-sm mb-10 leading-relaxed">Hyper-localized targeting for a fitness app launch, resulting in 200k downloads in 30 days.</p>
+                <p className="text-on-surface/60 text-sm mb-10 leading-relaxed">Hyper‑localized targeting for a fitness app launch, driving 200k downloads in 30 days.</p>
                 <div className="flex items-center justify-between mt-auto">
                   <div className="bg-surface-container-highest/50 px-5 py-3 rounded-lg text-center flex-1 mr-2">
                     <span className="block text-[10px] text-on-surface/40 mb-1">ROAS</span>
@@ -130,7 +130,7 @@ export default function CaseStudies() {
               <div className="relative overflow-hidden rounded-xl bg-surface-container-low border border-outline-variant/5 p-8 flex flex-col md:flex-row gap-8">
                 <div className="flex-1">
                   <h3 className="font-headline text-2xl font-extrabold mb-4">The Creative Delta</h3>
-                  <p className="text-on-surface/60 text-sm mb-6">See the difference between standard production and TikTok-native UGC creative strategy.</p>
+                  <p className="text-on-surface/60 text-sm mb-6">See the difference between standard production and TikTok‑native UGC strategy.</p>
                   <div className="space-y-6">
                     <div className="flex gap-4">
                       <div className="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0">
@@ -140,7 +140,7 @@ export default function CaseStudies() {
                       </div>
                       <div>
                         <p className="text-xs font-bold text-on-surface/60">BEFORE (Corporate Style)</p>
-                        <p className="text-sm">High bounce rates, 0.8% CTR, low engagement.</p>
+                        <p className="text-sm">High bounce, 0.8% CTR, low engagement.</p>
                       </div>
                     </div>
                     <div className="flex gap-4">
@@ -172,7 +172,7 @@ export default function CaseStudies() {
       {/* Testimonial / Results Banner */}
       <section className="py-24 px-6 bg-surface-container-low">
         <FadeIn className="max-w-7xl mx-auto text-center">
-          <h2 className="font-headline text-3xl font-extrabold mb-16 italic">"Their creative approach turned our struggling TikTok presence into our #1 revenue channel."</h2>
+          <h2 className="font-headline text-3xl font-extrabold mb-16 italic">"Their creative approach turned our TikTok into our number one revenue channel."</h2>
           <div className="flex flex-wrap justify-center gap-12 opacity-50 grayscale contrast-125">
             <div className="h-8 flex items-center font-bold text-xl uppercase tracking-tighter">Brand Alpha</div>
             <div className="h-8 flex items-center font-bold text-xl uppercase tracking-tighter">Nordic Gear</div>
@@ -189,7 +189,7 @@ export default function CaseStudies() {
         <FadeIn className="max-w-5xl mx-auto glass-card rounded-2xl p-12 md:p-20 text-center relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
           <h2 className="font-headline text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">Ready to be our next <br/><span className="text-primary">Success Story?</span></h2>
-          <p className="text-on-surface/70 text-lg mb-12 max-w-xl mx-auto">Book a free strategy audit. We'll analyze your current account and show you exactly where you're leaving money on the table.</p>
+          <p className="text-on-surface/70 text-lg mb-12 max-w-xl mx-auto">Book a free strategy audit. We will diagnose what is holding you back and how to scale profitably.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-primary to-primary-container px-10 py-4 rounded-xl text-on-primary-container font-extrabold text-lg shadow-2xl shadow-primary-container/30 hover:scale-105 transition-transform">
               Get Your Free Audit

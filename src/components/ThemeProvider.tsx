@@ -24,38 +24,19 @@ export function ThemeProvider({
   defaultTheme = 'dark',
   ...props
 }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(() => {
-    if (typeof window !== 'undefined') {
-      return (window.localStorage.getItem('vite-ui-theme') as Theme) || defaultTheme;
-    }
-    return defaultTheme;
-  });
+  const [theme] = useState<Theme>(() => 'dark');
 
   useEffect(() => {
     const root = window.document.documentElement;
 
     root.classList.remove('light', 'dark');
 
-    if (theme === 'system') {
-      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
-        .matches
-        ? 'dark'
-        : 'light';
-
-      root.classList.add(systemTheme);
-      return;
-    }
-
     root.classList.add(theme);
   }, [theme]);
 
   const value = {
     theme,
-    toggleTheme: () => {
-      const newTheme = theme === 'dark' ? 'light' : 'dark';
-      localStorage.setItem('vite-ui-theme', newTheme);
-      setTheme(newTheme);
-    },
+    toggleTheme: () => null,
   };
 
   return (

@@ -1,16 +1,16 @@
 import React from 'react';
-import { FadeIn } from '../../components/FadeIn';
-import { SEO } from '../../components/SEO';
-import SavingsCalculator from '../../components/SavingsCalculator';
-import { SITE_URL } from '../../lib/site';
+import { FadeIn } from '../../../components/FadeIn';
+import { SEO } from '../../../components/SEO';
+import SavingsCalculator from '../../../components/SavingsCalculator';
+import { SITE_URL } from '../../../lib/site';
 
-export default function CalculatorPage() {
+export default function ToolCalculatorPage() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "TikTok Ads Agency ROI Calculator - Tiklife",
-    "description": "See how much profit you lose to retainers and percentage fees. Compare real savings with Tiklife.",
-    "url": `${SITE_URL}/calculator`
+    "name": "TikTok Ads ROI Calculator - Tiklife",
+    "description": "Calculate your savings and extra profit when you switch to a flat‑fee TikTok agency model. Keep more of your ROAS.",
+    "url": `${SITE_URL}/tool/calculator`
   };
 
   return (

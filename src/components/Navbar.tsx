@@ -22,18 +22,20 @@ export const Navbar = () => {
     { name: "Services", path: "/services" },
     { name: "Pricing", path: "/pricing" },
     { name: "Case Studies", path: "/case-studies" },
+    { name: "Tool", path: "/tool" },
     { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact" }
   ];
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'glass-card' : 'bg-transparent py-2'}`}>
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
         <a 
           href="/"
           className="flex items-center gap-2 cursor-pointer transition-transform hover:scale-105" 
         >
-          <img src="/assets/logo-full.png" alt="Tiklife Logo" className="h-[52px] w-auto drop-shadow-[0_0_15px_rgba(53,251,245,0.4)]" />
+          {/* Light mode logo */}
+          <img src="/assets/logo-white.png" alt="Tiklife Logo" className="block h-[72px] w-auto drop-shadow-[0_0_15px_rgba(53,251,245,0.4)]" width="220" height="72" />
         </a>
 
         {/* Desktop Nav */}
@@ -53,13 +55,6 @@ export const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-4">
-          <button 
-            onClick={toggleTheme} 
-            className="p-2 rounded-full hover:bg-surface-container-highest transition-colors text-on-surface mr-2"
-            aria-label="Toggle Theme"
-          >
-            {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-          </button>
           <a 
             href="/contact"
             className="bg-gradient-to-br from-primary to-primary-container text-on-primary-container px-6 py-2.5 rounded-xl font-bold text-sm hover:opacity-90 hover:scale-105 transition-all shadow-lg shadow-primary/20 neon-glow-pink"
@@ -70,13 +65,6 @@ export const Navbar = () => {
 
         {/* Mobile Toggle & Theme */}
         <div className="md:hidden flex items-center gap-3">
-          <button 
-            onClick={toggleTheme} 
-            className="p-2 rounded-full hover:bg-surface-container-highest transition-colors text-on-surface"
-            aria-label="Toggle Theme"
-          >
-            {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-          </button>
           <button className="text-on-surface" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             {mobileMenuOpen ? <X /> : <Menu />}
           </button>

@@ -6,6 +6,7 @@ import { ShareButtons } from '../../../components/ShareButtons';
 import BlogLeadForm from '../../../components/BlogLeadForm';
 import { getArticleBySlug } from '../articles';
 import { ArrowLeft } from 'lucide-react';
+import { SITE_URL } from '../../../lib/site';
 
 export default function BlogPost() {
   const pageContext = usePageContext();
@@ -26,15 +27,15 @@ export default function BlogPost() {
   return (
     <>
       <SEO 
-        title={`${title || slug} | TikTok Ads Agency`}
-        description={description || 'Read the full insights and case studies on TikTok Ads Agency.'}
+        title={title || slug}
+        description={description || 'Read the full breakdowns and case studies from TikTok Ads Agency.'}
         image={image}
       />
       <main className="relative pt-32 pb-24 px-6 max-w-4xl mx-auto">
         <FadeIn>
            <a href="/blog" className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium mb-8 transition-colors">
               <ArrowLeft className="w-4 h-4" />
-              Back to Resource Hub
+              Back to the Resource Hub
            </a>
            
            <header className="mb-12 border-b border-outline-variant/20 pb-10">
@@ -47,7 +48,7 @@ export default function BlogPost() {
                  <div className="flex items-center gap-2">
                     <span className="font-bold text-primary">{author || 'Editorial Team'}</span>
                  </div>
-                 <span className="text-outline text-sm">•</span>
+                 <span className="text-outline text-sm">|</span>
                  <span className="text-sm font-medium">{readTime || '5 min read'}</span>
               </div>
            </header>
@@ -62,7 +63,7 @@ export default function BlogPost() {
             <div className="relative">
               {/* Floating Share Side Bar (Desktop only) */}
               <ShareButtons 
-                url={`https://yourdomain.com/blog/${slug}`} 
+                url={`${SITE_URL}/blog/${slug}`} 
                 title={title || slug} 
                 variant="floating"
               />
@@ -77,7 +78,7 @@ export default function BlogPost() {
             </div>
 
             <ShareButtons 
-              url={`https://yourdomain.com/blog/${slug}`} 
+              url={`${SITE_URL}/blog/${slug}`} 
               title={title || slug} 
             />
         </FadeIn>

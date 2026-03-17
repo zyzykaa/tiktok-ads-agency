@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { SITE_URL } from '../lib/site';
 
 interface SEOProps {
   title: string;
@@ -17,8 +18,8 @@ export const SEO: React.FC<SEOProps> = ({
   description, 
   keywords = "tiktok ads, agency, marketing, roas, tiktok shop, ugc",
   type = "website",
-  image = "https://your-tiktok-agency.com/og-image.jpg",
-  url = "https://your-tiktok-agency.com/",
+  image = `${SITE_URL}/og-image.jpg`,
+  url = `${SITE_URL}/`,
   schemaData,
   preloadImage
 }) => {
