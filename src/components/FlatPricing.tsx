@@ -128,11 +128,11 @@ export default function FlatPricing() {
               {/* 1. ACH / Wire (Recommended) */}
               <div className="grid grid-cols-12 items-center px-4 sm:px-6 py-5 bg-emerald-50 text-emerald-950 hover:bg-emerald-100 dark:bg-emerald-950/60 dark:text-emerald-100 dark:hover:bg-emerald-900/60 transition border-l-4 border-emerald-500 ring-2 ring-emerald-400/40 shadow-[0_0_20px_rgba(16,185,129,0.2)]">
                 <div className="col-span-5 sm:col-span-4">
-                  <div className="font-bold text-on-surface dark:text-white flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
+                  <div className="font-bold text-emerald-950 dark:text-white flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
                     US ACH / Wire
                     <span className="w-fit bg-emerald-100 text-emerald-700 border border-emerald-300 dark:bg-emerald-500/20 dark:text-emerald-400 dark:border-emerald-500/30 text-[10px] px-2 py-0.5 rounded uppercase tracking-wider font-bold">Recommended</span>
                   </div>
-                  <div className="text-xs sm:text-sm text-on-surface-variant dark:text-slate-400 mt-1">Via Airwallex US Routing</div>
+                  <div className="text-xs sm:text-sm text-emerald-800 dark:text-slate-400 mt-1">Via Airwallex US Routing</div>
                 </div>
                 <div className="col-span-4 sm:col-span-3 text-center font-bold text-emerald-700 dark:text-emerald-300">0.0%</div>
                 <div className="hidden sm:block sm:col-span-2 text-center font-semibold text-emerald-800/80 dark:text-emerald-200/80">3.0%</div>
@@ -142,11 +142,11 @@ export default function FlatPricing() {
               {/* 2. USDT (Recommended) */}
               <div className="grid grid-cols-12 items-center px-4 sm:px-6 py-5 bg-emerald-50 text-emerald-950 hover:bg-emerald-100 dark:bg-emerald-950/60 dark:text-emerald-100 dark:hover:bg-emerald-900/60 transition border-l-4 border-emerald-500 ring-2 ring-emerald-400/40 shadow-[0_0_20px_rgba(16,185,129,0.2)]">
                 <div className="col-span-5 sm:col-span-4">
-                  <div className="font-bold text-on-surface dark:text-white flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
+                  <div className="font-bold text-emerald-950 dark:text-white flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
                     Cryptocurrency
                     <span className="w-fit bg-emerald-100 text-emerald-700 border border-emerald-300 dark:bg-emerald-500/20 dark:text-emerald-400 dark:border-emerald-500/30 text-[10px] px-2 py-0.5 rounded uppercase tracking-wider font-bold">Recommended</span>
                   </div>
-                  <div className="text-xs sm:text-sm text-on-surface-variant dark:text-slate-400 mt-1">USDT (ERC-20 / TRC-20)</div>
+                  <div className="text-xs sm:text-sm text-emerald-800 dark:text-slate-400 mt-1">USDT (ERC-20 / TRC-20)</div>
                 </div>
                 <div className="col-span-4 sm:col-span-3 text-center font-bold text-emerald-700 dark:text-emerald-300">0.0%</div>
                 <div className="hidden sm:block sm:col-span-2 text-center font-semibold text-emerald-800/80 dark:text-emerald-200/80">3.0%</div>
