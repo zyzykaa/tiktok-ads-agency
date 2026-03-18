@@ -25,6 +25,7 @@ export const SEO: React.FC<SEOProps> = ({
 }) => {
   const siteName = "TikTok Ads Agency";
   const fullTitle = `${title} | ${siteName}`;
+  const finalImage = image.startsWith('http') ? image : `${SITE_URL}${image.startsWith('/') ? '' : '/'}${image}`;
 
   return (
     <Helmet htmlAttributes={{ lang: 'en-US' }}>
@@ -41,14 +42,14 @@ export const SEO: React.FC<SEOProps> = ({
       <meta property="og:description" content={description} />
       <meta property="og:type" content={type} />
       <meta property="og:site_name" content={siteName} />
-      <meta property="og:image" content={image} />
+      <meta property="og:image" content={finalImage} />
       <meta property="og:url" content={url} />
       
       {/* Twitter metadata */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:image" content={finalImage} />
 
       {/* Schema.org JSON-LD */}
       {schemaData && (
