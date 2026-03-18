@@ -18,7 +18,12 @@ export function getArticlesData() {
     };
   });
 
-  return posts;
+  // Sort posts by date (newest first)
+  return posts.sort((a, b) => {
+    const dateA = new Date(a.frontmatter.date || 0).getTime();
+    const dateB = new Date(b.frontmatter.date || 0).getTime();
+    return dateB - dateA;
+  });
 }
 
 export function getArticleBySlug(slug: string) {
