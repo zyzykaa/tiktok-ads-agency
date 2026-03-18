@@ -102,7 +102,7 @@ export default function TikTokViralPhone() {
                   transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                   className="relative w-32 h-32 flex justify-center items-center"
                 >
-                  <img src="/assets/logo-white.png" alt="Tiklife Logo" className="block w-32 h-auto drop-shadow-[0_0_20px_rgba(53,251,245,0.8)]" width="320" height="128" />
+                  <img src="/assets/logo-white.webp" alt="Tiklife Logo" className="block w-32 h-auto drop-shadow-[0_0_20px_rgba(53,251,245,0.8)]" width="320" height="128" />
                 </motion.div>
               </div>
 

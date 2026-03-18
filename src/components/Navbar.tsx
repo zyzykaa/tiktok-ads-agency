@@ -35,7 +35,7 @@ export const Navbar = () => {
           className="flex items-center gap-2 cursor-pointer transition-transform hover:scale-105" 
         >
           {/* Light mode logo */}
-          <img src="/assets/logo-white.png" alt="Tiklife Logo" className="block h-[72px] w-auto drop-shadow-[0_0_15px_rgba(53,251,245,0.4)]" width="220" height="72" />
+          <img src="/assets/logo-white.webp" alt="Tiklife Logo" className="block h-[72px] w-auto drop-shadow-[0_0_15px_rgba(53,251,245,0.4)]" width="220" height="72" />
         </a>
 
         {/* Desktop Nav */}

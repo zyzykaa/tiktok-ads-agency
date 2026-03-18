@@ -237,7 +237,7 @@ export default function Home() {
               <div className="absolute -bottom-8 -right-8 w-64 h-64 origin-bottom-right transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3">
                 <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full"></div>
                 <img 
-                  src="/assets/tiklife-robot.png" 
+                  src="/assets/tiklife-robot.webp" 
                   alt="Tiklife AI Assistant" 
                   className="w-full h-full object-contain relative z-10 drop-shadow-2xl"
                   onError={(e) => {
