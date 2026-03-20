@@ -5,5 +5,6 @@ import type { Config } from "vike/types";
 export default {
   // <title>
   title: "TikTok Ads Agency",
+  favicon: "/favicon.png?v=2",
   extends: [vikeReact]
 } satisfies Config;
