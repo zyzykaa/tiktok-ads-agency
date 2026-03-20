@@ -37,6 +37,20 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
         {/* Anti-FOUC for Dark Mode */}
         <script dangerouslySetInnerHTML={{ __html: `document.documentElement.classList.add('dark');` }} />
+        
+        {/* Google Analytics (GA4) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5BS4X77LVH"></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-5BS4X77LVH');
+          `}
+        </script>
+        {/* End Google Analytics */}
+
         {/* TikTok Pixel Code */}
         <script>
           {`
